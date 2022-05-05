@@ -12,5 +12,5 @@
 
 
 ---
-Tutorial utilizado: Code Explained https://www.youtube.com/watch?v=9TcU2C1AACw
+Tutorial utilizado: [Snake Game by Code Explained](https://www.youtube.com/watch?v=9TcU2C1AACw)
 
