@@ -6,6 +6,7 @@
 
 
 ### Snake Game: Modelo
+![snakegame](https://user-images.githubusercontent.com/89283901/166855668-444fb8d0-b393-4edd-a615-460b3e52b13d.gif)
 
 
 ## Como Jogar:
