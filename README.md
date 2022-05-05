@@ -6,10 +6,10 @@
 ---
 ## Como Jogar:
 
-Use as setas do teclado para se mover, controlar a cobra.
-Evite colidir nas paredes ou na calda da cobra. Senão, <strong>GAME OVER!</strong>
-Aperte <strong>F5</strong> para jogar de novo.
-Avoid colliding with the walls or your tail. If you do, it's game over!
+* Use as setas <strong> ↤ ↥ ↦ ↧</strong> do teclado para se mover, controlar a cobra.
+* Evite colidir nas paredes ou na calda da cobra. Senão, <strong>GAME OVER!</strong>
+* Aperte <strong>F5</strong> para jogar de novo.
+
 
 ---
 Tutorial utilizado: Code Explained https://www.youtube.com/watch?v=9TcU2C1AACw
