@@ -1,9 +1,7 @@
-# snake-game
- Jogo criado com base em tutorial, utilizando HTML + JAVASCRIPT
-
 <h2 align="center">Snake Game</h2>
 <p align="center">Projeto criado com feito com HTML + Javascript para testar conhecimentos</p>
-![snakegame](https://user-images.githubusercontent.com/89283901/166855668-444fb8d0-b393-4edd-a615-460b3e52b13d.gif)
+
+![SNAKE GAME](https://user-images.githubusercontent.com/89283901/166855808-cadf90d3-b0f0-4a79-9723-30ef770b7226.gif)
 
 ---
 ## Como Jogar:
