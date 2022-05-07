@@ -1,17 +1,16 @@
 const cvs = document.getElementById('snake')
-const ctx = cvs.getContext('2d') //Metodos de propriedades
+const ctx = cvs.getContext('2d') 
 
-//UNIDADE - CAIXA
 const box = 32
 
-//INSERIR IMAGEM
+//IMAGENS
 const ground = new Image()
 ground.src = "img/ground.png"
 
 const foodImg = new Image()
 foodImg.src = "img/food.png"
 
-//INSERIR AUDIO
+//AUDIOS
 const dead = new Audio()
 const eat = new Audio()
 const up = new Audio()
@@ -27,24 +26,23 @@ right.src = 'audio/right.mp3'
 down.src = 'audio/down.mp3'
 
 
-//ANIMAL - COBRA
+//SNAKE
 let snake = []
 snake[0] = {
     x : 9 * box,
     y : 10 * box
 }
 
-//COMIDA - MAÇA
+//FOOD
 let food = {
     x: Math.floor(Math.random()*17+1) * box,
     y: Math.floor(Math.random()*15+3) * box
 }
 
-//SCORE - PONTUAÇÃO
+//SCORE
 let score = 0
 
-//CONTROLAR A COBRA = TECLADO BOTÕES
-
+//CONTROLS
 let d
 
 document.addEventListener('keydown', direction)
@@ -66,7 +64,7 @@ function direction(event) {
     }
 }
 
-//CONFIRMAR COLISÃO
+//COLLID
 function collision(head,array){
     for(let i = 0; i < array.length; i++){
         if(head.x == array[i].x && head.y == array[i].y) {
@@ -76,9 +74,10 @@ function collision(head,array){
     return false
 }
 
-//INSERIR ELEMENTOS AO CANVAS
+//CANVAS
 function draw() {
-    //CABEÇA DA COBRA NO JOGO
+    
+    //SNAKE HEAD
     ctx.drawImage(ground, 0, 0)
 
     for (let i = 0; i < snake.length; i++) {
@@ -88,34 +87,34 @@ function draw() {
         ctx.strokeStyle = 'red'
         ctx.strokeRect(snake[i].x, snake[i].y, box, box)
     }
-    //FRUTA SE MOVENDO
+    //MOVIMENT FOOD
     ctx.drawImage(foodImg, food.x, food.y)
 
-    //POSIÇÃO DE CABEÇA ANTERIOR
+    //HEAD POSITIONS
     let snakeX = snake[0].x
     let snakeY = snake[0].y
 
-    //DIREÇÃO 
+    //DIRECTIONS
     if (d == 'LEFT') snakeX -= box
     if (d == 'UP') snakeY -= box
     if (d == 'RIGHT') snakeX += box
     if (d == 'DOWN') snakeY += box
 
-    //INCREMENTAR AO COMER A FRUTA
+    //INCREMENT FOOD
     if (snakeX == food.x && snakeY == food.y) {
         score++
         eat.play()
-        //SE COMER A FRUTA GANHA PONTO
+        
+        //PONT FOR EAT FRUIT
         food = {
             x: Math.floor(Math.random()*17+1) * box,
             y: Math.floor(Math.random()*15+3) * box
-        } //SENÃO COMER PERDER A CABEÇA
+        }
     } else {
-        //REMOVER O RABO DA COBRA
         snake.pop()
     }
 
-    //ADICIONAR NOVA CABEÇA
+    //NEW HEAD
     let newHead = {
         x : snakeX,
         y : snakeY
@@ -134,5 +133,5 @@ function draw() {
     ctx.fillText(score, 2*box, 1.6*box)
 
 }
-//CHAMAR FUNÇÃO A CASA 1s
+
 let game = setInterval(draw, 100)
